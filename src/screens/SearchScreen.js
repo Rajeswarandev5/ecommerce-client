@@ -110,7 +110,7 @@ export default function SearchScreen() {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const { data } = await axios.get(`/api/products/categories`);
+        const { data } = await axios.get(`${config.HOST}/api/products/categories`);
         setCategories(data);
       } catch (err) {
         toast.error(getError(err));
